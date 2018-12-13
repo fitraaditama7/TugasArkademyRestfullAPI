@@ -7,7 +7,7 @@ const todo = require('./src/todo/routes/ToDo.route');
 const app = express();
 
 // Setting Mongodb
-let dev_db_url = 'mongodb://localhost:27017/todolist';
+let dev_db_url = 'mongodb://fitraaditama7:Harvestmoon2@ds151530.mlab.com:51530/todolist';
 let mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
@@ -34,13 +34,10 @@ app.use((req, res, next) => {
 });
 
 
-let port = 3000;
+let API_PORT = process.env.PORT || 3000;
 
-
-
-
-app.listen(port, () => {
-    console.log('Server Running in port ' + port);
+app.listen(API_PORT, () => {
+    console.log('Server Running in port ' + API_PORT);
 });
 
 

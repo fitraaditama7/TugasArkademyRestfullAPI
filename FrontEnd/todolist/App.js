@@ -14,7 +14,7 @@ export default class App extends Component {
       todo: [],
       text: '',
       btnText: 'Simpan',
-      base_url: 'http://192.168.0.37:3000/todo'
+      base_url: 'https://tugastodolist.herokuapp.com/todo'
     }
   }
 
